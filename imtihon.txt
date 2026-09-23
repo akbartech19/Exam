@@ -1,0 +1,167 @@
+=============Amaliy mashg'ulot=============
+1-mashq
+CREATE TABLE students (
+    id INTEGER, ism VARCHAR(100), 
+    yosh INTEGER, 
+    group_name VARCHAR(100)
+    );
+
+2- mashq
+INSERT INTO students (id, ism, yosh, group_name) VALUES
+(1, 'Akbar', 15, 'Backend')
+(2, 'Ali', 15, 'Frontend'), 
+(3, 'Vali', 14, 'SMM'), 
+(4, 'Sardor', 10, 'English'), 
+(5, 'Jamshid', 9, 'Math');
+
+3-mashq
+SELECT * FROM students WHERE yosh < 20;
+
+4-mashq
+UPDATE students SET group_name = 'Python' WHERE  id = 1;
+
+5-mashq
+DELETE FROM students WHERE id = 1;
+
+
+============Savollarga Javoblar=============
+1.Python tilida funksiya - ma'lum bir vazifani bajarishga mo'ljallangan, 
+qayta-qayta ishlatish mumkun bo'lgan kod bloki hisoblanadi
+
+2.Yangi funksiya (def) kalit so'zi bilan e'lon qilinadi
+
+3.Parametr-bu funksiya yaratilayotgan vaqtda qavs ichida yoziladigan
+keyinchalik keladigan ma'lumotni kutib turuvchi o'zgaruvchi.
+  Argument- bu funksiya chaqirilayotgan vaqtda parametrlarni 
+  o'rniga yuboriladigan haqiqiy qiymatdir.
+
+4.return- Natijani qaytaradi: Funksiya bajargan hisob-kitob yoki 
+ish natijasini uni chaqirgan kodga uzatadi.
+Funksiyani to'xtatadi: return operatori ishlashi bilan funksiya o'z faoliyatini zudlik bilan yakunlaydi. 
+Undan keyin yozilgan kodlar hech qachon ishlamaydi.
+
+5.default parametr funksiya e'lon qilinayotgan vaqtda 
+parametning o'ziga "=" belgi orqaliqiymat berish bilan belgilanadi
+Misol:
+def tabrikla(ism, til="uz"):  
+    if til == "uz":
+        print(f"Assalomu alaykum, {ism}!")
+
+tabrikla("Olim")
+Natija: Assalomu alaykum, Olim!
+
+6.
+def qushish (son01, son02):
+    son = son01 + son02
+    print(son)
+
+qushish(1, 2)
+    
+7. 
+def juft_sonlarni_sarala(royxat):
+    juft_sonlar = []
+    for son in royxat:
+        if son % 2 == 0: 
+            juft_sonlar.append(son) 
+    return juft_sonlar
+
+mening_sonlarim = [12, 23, 45, 67, 89]
+
+natija = juft_sonlarni_sarala(mening_sonlarim)
+
+print(natija)  
+
+8.Class — bu chizma (shablon), 
+Object esa shu chizma asosida yaratilgan real narsadir.
+
+9.__init__ metodi — bu obyekt yoʻnaltirilgan dasturlashda (OOP) 
+yangi obyekt yaratilgan zahoti avtomatik ravishda ishga tushadigan maxsus funksiyadir.
+
+10. self kalit soʻzi — bu klass ichida yaratilgan 
+aynan hozirgi obyektning oʻziga ishora qiluvchi koʻrsatkichdir.
+
+11. class Student:
+        def __init__(self, ism, yosh):
+            self.ism = ism
+            self.yosh = yosh
+
+        def info(self):
+            print(f"Talaba ismi: {self.ism}, Yoshi: {self.yosh} da.")
+    
+    student1 = Student("Jasur", 20)
+
+    student1.info()  
+Natija: Talaba ismi: Jasur, Yoshi: 20 da.
+
+12.
+class Student:
+        def __init__(self, ism, yosh):
+            self.ism = ism
+            self.yosh = yosh
+
+        def info(self):
+            print(f"Talaba ismi: {self.ism}, Yoshi: {self.yosh} da.")
+    
+    student1 = Student("Jasur", 20)
+
+    print("--- 1-Obyekt ma'lumotlari ---")
+    student1.info()  
+
+Natija:--- 1-Obyekt ma'lumotlari ---
+Talaba ismi: Jasur, Yoshi: 20 da.
+
+13. Malumotlar bazasi — bu kompyuterda tartibli saqlanadigan 
+va tezkorlik bilan boshqariladigan raqamli ma'lumotlar to‘plamidir.
+
+14.
+Ustun (Column): Jadvalning tepadan pastga yo‘nalgan qismi bo‘lib, 
+ma'lumotning turi yoki kategoriyasini belgilaydi
+Qator (Row): Jadvalning chapdan o‘ngga yo‘nalgan qismi bo‘lib,
+bitta aniq obyekt haqidagi to‘liq ma'lumot (yozuv) hisoblanadi.
+Jadval (Table) — bu ma'lumotlar bazasining asosiy elementi bo‘lib, ma'lumotlarni tartibli 
+va tizimli ko‘rinishda saqlaydigan raqamli ombor (konteyner) hisoblanadi.
+
+15.
+Primary Key — jadvaldagi har bir qatorni bir-biridan ajratib turuvchi 
+takrorlanmas (unikal) identifikator hisoblanadi.
+
+16.
+SQL - bu ma'lumotlar bazasi bilan muloqot qilish, undagi jadvallarni boshqarish va
+ma'lumotlar ustida amallar bajarish uchun ishlatiladigan maxsus dasturlash tilidir.
+
+17. 
+Foreign Key (Tashqi kalit) — bu bitta jadvaldagi ustun bo‘lib, 
+u boshqa jadvalning Primary Key ustuniga bog‘langan bo‘ladi.
+
+18. 
+Relyatsion (SQL) va Norelyatsion (NoSQL) ma'lumotlar bazalari o‘rtasidagi eng asosiy 
+farq — ma'lumotlarning qanday shaklda saqlanishi va tizimning qay darajada moslashuvchanligida.
+
+19.
+PostgreSQL (ko'pincha Postgres deb ataladi) — bu ochiq kodli (open-source), mutlaqo bepul va dunyodagi eng 
+ishonchli Relyatsion (SQL) ma'lumotlar bazasini boshqarish tizimidir.
+
+20.
+psql -U postgres
+
+24.
+CREATE DATABASE nomi;
+
+25.
+SELECT jadvalda  kerakli ma'lumotlarni olish uchun ishlatiladigan
+
+26.
+WHERE operatori ma'lumotlarni saralash (filtrlash) vazifasini bajaradi.
+
+27. PostgreSQL-da jadvalga yangi ma'lumot (qator) 
+qo'shish uchun INSERT INTO operatoridan foydalaniladi.
+
+28.
+PostgreSQL-da jadvaldagi mavjud ma'lumotlarni (qatorlarni) 
+o'zgartirish yoki yangilash uchun UPDATE operatoridan foydalaniladi.
+
+29.
+PostgreSQL-da jadvaldagi mavjud ma'lumotlarni (qatorlarni) o'chirish uchun DELETE FROM operatoridan foydalaniladi.
+
+30.
+
